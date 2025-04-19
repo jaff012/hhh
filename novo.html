@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Primeira Guerra Mundial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQarWULKvX-YjnnDoMREMMFlZHYo66QZLOPjg&s)  ;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: darkred;
+    }
+    .bloco {
+      background-color: rgb(219, 174, 119);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: none;
+    }
+    .btn {
+      background : #800000;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px auto;
+      display: block;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎖️ A Primeira Guerra Mundial (1914-1918)</h1>
+
+  <button class="btn" onclick="playMusic()">Iniciar Música</button>
+  <audio id="bgm" loop>
+    <source src="https://ia801404.us.archive.org/4/items/KickInTheHead/kick.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <button class="btn" onclick="mostrarBloco(0)">➤ Introdução</button>
+  <div class="bloco" id="bloco0">
+    <p>A Primeira Guerra Mundial foi um dos maiores conflitos da história, envolvendo diversas nações e resultando em milhões de mortes. Ela teve origens complexas e marcou uma nova era de tecnologia militar e estratégias de combate.</p>
+    <button class="btn" onclick="mostrarBloco(1)">➤ Causas da Guerra</button>
+  </div>
+
+  <div class="bloco" id="bloco1">
+    <ul>
+      <li><b>Imperialismo:</b> Disputa por colônias aumentou tensões.</li>
+      <li><b>Nacionalismo:</b> Sentimento exacerbado que causou conflitos.</li>
+      <li><b>Alianças Militares:</b> Tríplice Entente vs Tríplice Aliança.</li>
+      <li><b>Assassinato do Arquiduque:</b> Estopim da guerra.</li>
+      <li><b>Corrida Armamentista:</b> Aumento de arsenais e tensão.</li>
+    </ul>
+    <button class="btn" onclick="mostrarBloco(2)">➤ Principais Eventos</button>
+  </div>
+
+  <div class="bloco" id="bloco2">
+    <ul>
+      <li><b>1914:</b> Início da guerra.</li>
+      <li><b>1915:</b> Entrada da Itália.</li>
+      <li><b>1916:</b> Batalhas de Verdun e Somme.</li>
+      <li><b>1917:</b> EUA entram e Rússia sai.</li>
+      <li><b>1918:</b> Rendição alemã.</li>
+    </ul>
+    <button class="btn" onclick="mostrarBloco(3)">➤ Tecnologias e Estratégias</button>
+  </div>
+
+  <div class="bloco" id="bloco3">
+    <ul>
+      <li>Metralhadoras e artilharia pesada</li>
+      <li>Guerra química (gás mostarda, cloro)</li>
+      <li>Tanques de guerra</li>
+      <li>Aviação militar</li>
+      <li>Guerra de trincheiras</li>
+    </ul>
+    <button class="btn" onclick="mostrarBloco(4)">➤ Consequências da Guerra</button>
+  </div>
+
+  <div class="bloco" id="bloco4">
+    <ul>
+      <li>Tratado de Versalhes: punições severas à Alemanha</li>
+      <li>Queda de impérios e surgimento de novas nações</li>
+      <li>Criação da Liga das Nações</li>
+      <li>Crise econômica global</li>
+      <li>Impacto social profundo e mudanças no papel das mulheres</li>
+    </ul>
+    <p>A guerra transformou o mundo política e tecnologicamente e plantou as sementes da Segunda Guerra Mundial.</p>
+  </div>
+
+  <script>
+    let blocos = document.querySelectorAll(".bloco");
+    function mostrarBloco(index) {
+      blocos[index].style.display = "block";
+    }
+
+    function playMusic() {
+      document.getElementById("bgm").play();
+    }
+  </script>
+</body>
+</html>
